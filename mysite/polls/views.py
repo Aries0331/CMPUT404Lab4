@@ -1,8 +1,8 @@
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+from .models import Question
 from django.core.urlresolvers import reverse
 
-from .models import Question, Choice
 # Create your views here.
 
 def index(request):
@@ -34,7 +34,13 @@ def vote(request, question_id):
 	else:
 		selected_choice.votes += 1	
 		selected_choice.save()
-		return HttpResponseRedirct(reverse('polls:results', args=(question.id)))
+		return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
 def results(request, question_id):
-	return HttpResponse("This page will show us which one is most popular")
+	#question = get_object_or_404(Question, pk=question_id)
+	#context = {'question': question}
+	#return HttpResponse("This page will show us which one is most popular")
+	#return render(request, 'polls/results.html',context)
+	response = "You're looking at the results of question %s."
+	return HttpResponse(response % question_id)
+
