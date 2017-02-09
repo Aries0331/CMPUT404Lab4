@@ -1,0 +1,38 @@
+/* css comment */
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform:rotate(0deg);
+		}
+	100% {
+		transform:rotate(360deg);
+		}
+}
+
+body {
+	background-color:orange;
+}
+
+li: first-letter {
+	font-size: 200%;
+}
+
+li:nth-child(even) {
+	blackground-color: #cccccc;
+}
+
+li:nth-child(odd) {
+	blackground-color: #aaaaaa;
+}
