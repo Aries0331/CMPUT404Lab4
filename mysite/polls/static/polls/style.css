@@ -30,19 +30,33 @@ li: first-letter {
 }
 
 li:nth-child(even) {
-	blackground-color: #cccccc;
+	blackground: liear-gradient(90deg, white,white 2em, #cccccc);
 }
 
 li:nth-child(odd) {
-	blackground-color: #aaaaaa;
+	blackground: linear-gradient(90deg, white, white 2em, #aaaaaa);
 }
 
 ul {
 	list-style-type: decimal;
+	counter-reset: level1;
 }
 
-ul.li:before {
+ul li:before {
+	content: counter(level1) " ";
+	counter-increment: level1;
+	border: 0.25em solid black;
+	border-radius: 50%;
+	padding: 0.5em;
+	background-color: #AAAAFF'
+}
+
+ul li {
+	font-size: 200%;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 	
+
 }
 
 

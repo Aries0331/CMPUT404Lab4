@@ -36,3 +36,13 @@ li:nth-child(even) {
 li:nth-child(odd) {
 	blackground-color: #aaaaaa;
 }
+
+ul {
+	list-style-type: decimal;
+}
+
+ul.li:before {
+	
+}
+
+
