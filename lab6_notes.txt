@@ -1,0 +1,12 @@
+pip freeze -> show existing packages
+
+
+heroku used to run wsgi file by http connection with gunicorn
+
+django serve dynamic content
+whitenoise serve static content
+
+wsgi tell gunicorn to turn around to whitenoise
+
+gunicorn use wsgi to sent ro django 
+wsgi
